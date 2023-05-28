@@ -1,0 +1,17 @@
+<section>
+  <div class="container">
+    <button class="btn" [routerLink]="['']">Powrót</button>
+    <h3>Tryby gry</h3>
+    <div class="card">
+      <input type="radio" [value]="'flashcard'" [(ngModel)]="mode" name="gameType">
+      <span>Wiem / Nie wiem</span>
+      </div>
+    <div class="card margin">
+      <input type="radio" [value]="'write'" [(ngModel)]="mode" name="gameType">
+      <span>Wpisywanie</span>
+    </div>
+    <div (click)="startGame()" class="margin action-row">
+      <button class="btn">Start</button>
+    </div>
+  </div>
+</section>

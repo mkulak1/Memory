@@ -1,0 +1,12 @@
+<div class="card flash-card">
+  <div>
+    <span>{{ word }}</span>
+    <hr />
+    <span>{{ translation }}</span>
+  </div>
+  <div>
+    <buton (click)="emitRemove()" ) class="btn btn-sm">
+      <fa-icon [icon]="iconTrash"></fa-icon>
+    </buton>
+  </div>
+</div>

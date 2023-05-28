@@ -1,0 +1,30 @@
+<section>
+  <div class="container">
+    <button class="btn" [routerLink]="['']">Powrót</button>
+    <h2>{{ category?.name }}</h2>
+    <app-flash-card
+      [word]="flashCard.word"
+      [translation]="flashCard.translation"
+      ]
+      *ngFor="let flashCard of flashCards"
+      (removeClicked)="removeFlashCard(flashCard)">
+    </app-flash-card>
+    <div class="margin inputs-row">
+      <input
+        [(ngModel)]="word"
+        [(ngModel)]="translation"
+        type="text"
+        Placeholder="Pytanie"
+        class="input" />
+      <input
+        [(ngModel)]="word"
+        [(ngModel)]="translation"
+        type="text"
+        Placeholder="Tłumaczenie"
+        class="input" />
+    </div>
+    <button (click)="addFlashCard()" ) class="btn margin">
+      <fa-icon [icon]="plusIcon"></fa-icon>
+    </button>
+  </div>
+</section>

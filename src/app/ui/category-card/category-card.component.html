@@ -1,0 +1,18 @@
+<div class="card category-card">
+  <span>{{ category.name }}</span>
+  <div>
+    <button (click)="emitRmove()" ) class="btn btn-sm">
+      <fa-icon [icon]="trashIcon"></fa-icon>
+    </button>
+    <button
+      [routerLink]="[category.id, 'flash-cards']"
+      class="btn btn-sm margin-left-sm">
+      <fa-icon [icon]="commentsIcon"></fa-icon>
+    </button>
+    <button
+      [routerLink]="category.id, 'games'"
+      class="btn btn-sm margin-left-sm">
+      <fa-icon [icon]="playIcon"></fa-icon>
+    </button>
+  </div>
+</div>
